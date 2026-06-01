@@ -3,13 +3,12 @@ using namespace std;
 
 int main () {
 
-    int num;
+    int num, table;
     cin >> num;
-    cout << "The Table Of The Entered Number Is: \n";
 
     for (int i=1; i<=10; i++){
-        int mul = num*i;
-        cout << mul << "\n";
+    table = num*i;
+    cout << num << " * " << i << " = " << table << endl;    
     }
     return 0;
 }

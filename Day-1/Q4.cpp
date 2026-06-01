@@ -2,14 +2,17 @@
 using namespace std;
 
 int main () {
-
-    int num;
-    int i = 0;
+    int num, count = 0;
     cin >> num;
 
-    while (num>0) {
-        num = num/10;
-        i++;
+    if (num == 0) {
+        cout << "The Number Of Digits Is: 1";
+    } else {
+        while (num > 0) {
+            num /= 10;
+            count++;
+        }
+        cout << "The Number Of Digits Is: " << count;
     }
-    cout << "The Number Of Digits In The Entered Number Is: " << i;
+    return 0;
 }

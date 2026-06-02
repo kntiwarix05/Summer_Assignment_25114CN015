@@ -1,24 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main () {
-
-    int num, n, rev = 0;
+int main() {
+    
+    int num, reverse = 0, original = num;
     cin >> num;
 
-    int originalNum = num; 
-
     while (num > 0) {
-            n = num%10;
-            rev = rev*10 + n;
-            num = num/10;
+        int digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num /= 10;
     }
-    if (rev == originalNum) {
-        cout << "The Entered Number Is A Palindrome.";
-    }
+    if (original == reverse) {
+        cout << "Palindrome Number";
+    } 
     else {
-        cout << "The Entered Number Is Not A Palindrome.";
+        cout << "Not a Palindrome Number";
     }
-
     return 0;
 }
